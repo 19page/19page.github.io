@@ -1,51 +1,233 @@
-[
-  {
-	"question": "How do I pay for repairs?    ",
-	"answer" : "It can support Alipay, online banking payment, and WeChat online payment. You can complete the payment operation through order inquiry and according to the payment prompt of the query result; Or follow the WeChat public account to complete the payment.    "
-  },
-  <br>
-  {
-	"question": "Who bears the cost of repair return postage?    ",
-	"answer" : "The equipment maintenance will be free of charge by us, but after the equipment is tested by us, the user voluntarily abandons the maintenance, then the free shipping will not be provided, and the payment fee will be returned in three to five working days after deducting the 5% handling fee.    "
-  },
-  <br>
-  {
-	"question": "What should I do if my device is damaged or lost during the mailing process?    ",
-	"answer" : "If your courier equipment is insured and damaged or lost during the courier process, we will actively cooperate with you to apply for compensation from the courier company. If the price is not insured at the time of delivery, we will not be responsible. The equipment sent by us will be insured by mail, and if there is damage or loss during the delivery process, we will pay in advance.    "
-  },
-  <br>
-  {
-	"question": " Which equipment models can be serviced?    ",
-	"answer" : " At present, we only accept Apple, Dell, Lenovo, HP, Asus, Huawei and other computer repairs.    "
-  },
-  <br>
-  {
-	"question": " What is the quality of repair parts?    ",
-	"answer" : "Our original quality accessories refer to the manufacturing process, materials and other structural quality of the accessories is equivalent to the original."
-  },
-  <br>
-  {
-	"question": " What should I do if there is a problem after repair?",
-	"answer" : " We have a warranty commitment to repair the equipment, as long as it meets the warranty commitment, it will be repaired again free of charge.    "
-  },
-  <br>
-  {
-	"question": " How long does it take to repair the device?    ",
-	"answer" : " Under normal circumstances, the equipment repair will be completed within 30 minutes after payment, in case of special circumstances, we will contact you in advance to inform the details.    "
-  },
-  <br>
-  {
-	"question": "Is the quality of the parasite phone excellent? Is it warranted?    ",
-	"answer" : "We promise to use original quality parts for equipment maintenance, and implement a lifetime warranty for all maintenance failure points (except human damage), so that we no longer have to worry about after-sales problems of maintenance.    "
-  },
-  <br>
-  {
-	"question": " How is maintenance satisfaction calculated?    ",
-	"answer" : "It is calculated by scoring and evaluating the repair order after the user's repair.    "
-  },
-  <br>
-  {
-	"question": " Is the network repair computer safe?    ",
-	"answer" : " We provide users with the whole process visualization, maintenance progress process-oriented service standards, in the maintenance processing of the whole process of tracking shooting, in the computer data information security for users have accumulated more than 100,000 safety deposits, effectively achieve integrity maintenance.    "
-  }   
-]
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 桌面</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+
+
+<header>
+  <h1 class="title-area">Phone Fix Booking System</h1>
+  <nav class="menu-area">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">EXTENSION</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <form name="repairForm" id="repairBookingForm" method="GET" action="process.php">
+    <div class="form-layout">
+      
+  <section class="customerDetails">
+        <h2>Customre Details</h2>
+    
+   <fieldset>
+    <legend>Consumer Type</legend>
+    <table>
+      <tr>
+        <td>Type</td>
+        <td>
+          <input type="radio" id="customer" name="type-group" checked><label>Consumer</label> 
+          <input type="radio" id="business" name="type-group"><label>Business</label> 
+        </td>
+      </tr>	
+    </table>
+    </fieldset>  
+   
+    <table>  
+      <label>Title:*</label>
+    <select id="Title">
+      <option value="Male">Mr</option>
+      <option value="Female">Miss</option>
+    </select> 
+      <tr>
+        <td>First Name:*</td>
+        <td><input type="text" id="First Name" required>
+</td>
+      </tr>
+      <tr>
+        <td>Last Name:*</td>
+        <td><input type="text" id="Last Name" required></td>
+      </tr>
+      <tr>
+        <td>Street:*</td>
+        <td><input type="text" id="Street" required></td>
+      </tr>
+      <tr>
+        <td>Suburb:</td>
+        <td><input type="text" id="Suburb" required></td>
+      </tr>
+        <td>City:*</td>
+        <td><input type="text" id="City" required></td>
+      </tr>
+    <tr>
+        <td>Post code:</td>
+        <td><input type="text" id="Post code" required></td>
+      </tr>
+    <tr>
+        <td>Phone Number:*</td>
+        <td><input type="tel" id="Phone Number" required></td>
+      </tr>
+      <tr>
+        <td>Email:*</td>
+        <td><input type="email" id="email" required></td>
+      </tr>					
+    </table>
+       
+      </section>	
+    
+    
+     
+      <section class="repairDetails">
+        <h2>Repair Details</h2>
+        
+         
+      <tr>
+        <td>Purchase Date:*</td>
+        <td><input type="date" id="purchaseDate" required> </td>
+      </tr>
+        <br>
+   <tr>
+        <td>Repair Date:*</td>
+        <td><input type="date" id="purchaseDate" required> </td>
+      </tr>
+           
+<fieldset>
+    <legend>Under Warranty</legend>
+    <table>
+      <tr>
+        <td>Warranty:</td>
+        <td><input type="checkbox" id="warranty"></td>        
+      </tr>
+    </table>
+     </fieldset>  
+  <tr>
+        <td>Serial Number:*</td>
+        <td><input type="tel" id="Serial Number" required></td>
+      </tr>  
+      <br>
+   <label>Make:*</label>
+    <select id="Make">
+      <option value="Apple">Apple</option>
+      <option value="Lenovo">Lenovo</option>
+      <option value="Asus">Asus</option>
+      <option value="Dell">Dell</option>
+      <option value="other">other</option>
+    </select> 
+    <br>
+    <tr>
+        <td>Moudle Number:*</td>
+        <td><input type="tel" id="Moudle Number" required></td>
+      </tr>
+     <br>
+    <label>Fault Category:*</label>
+    <select id="Fault Category">
+      <option value="screen">screen</option>
+      <option value="camera">camera</option>
+      <option value="motherboard">motherboard</option>
+      <option value="sound">sound</option>
+       <option value="other">other</option>
+    </select>
+   <br>
+       <label>Description: </label><br>
+<textarea id="description_text" cols="50" rows="10">
+</textarea>
+       
+      </section>	
+
+      <section class="courtesyPhone">
+        <h2>Courtesy Laptop</h2>
+        
+       
+       <label>Item Type:</label>
+					<select id="itemType">
+						<option value="Dell XPS">HP Pavilion</option>
+						<option value="HP Elite Book">HP EliteBook</option>
+						<option value="Apple MacBook">Apple MacBook</option>
+						<option value="Charger">Charger</option>
+					</select>
+					<br>
+					<button id="addItemBtn" type = "button">Add</button>
+					<br>
+					<table id="itemTable">	
+						<tr id="table-header">
+							<th style="border: 1px solid black; width: 100px">Item</th>
+							<th style="border: 1px solid black; width: 100px">Cost</th>	
+						</tr>
+					</table>		
+				</fieldset> 
+        
+      </section>	
+
+      <section class="costSection">
+        <h2>Cost</h2>
+        
+        <table>
+      <tr>
+        <td>Bond</td>
+        <td><input id="bondAmount" type="text" value="$0.00" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Service Fee:</td>
+        <td><input id="serviceFee" type="text" value="$85.00" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Total</td>
+        <td><input id="subTotal" type="text" value="$85.00" readonly></td>
+      </tr>
+
+      <tr>
+        <td>GST</td>
+        <td><input id="gst" type="text" value="$12.75" readonly></td>
+      </tr>
+
+      <tr>
+        <td>Total(+GST)</td>
+        <td><input id="grandTotal" type="text" value="$97.75" readonly></td>
+      </tr>						
+    </table>
+        
+        
+      </section>	
+
+      <section class="buttonSection">
+        <h2>Buttons</h2>
+        
+   
+  <input type="reset" value="Reset" id="btnReset">
+  <input type="submit" value="Submit" name="submit"> 
+        
+        
+  <form name="input" action="html_form_action.php" method="get">
+<input type="submit" value="Submit事例">
+</form>    
+        
+        
+        
+  <input type="button" value="FAQ" onclick='location.href=("https://codepen.io/qianzhouyue/pen/MWGxQmV")' />
+
+
+      </section>				
+    </div>		
+  </form>	
+</main>
+
+<footer>
+  <p>Advanced Web Design, Copyright &copy; 2020</p>
+</footer>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
